@@ -22,6 +22,9 @@ PHP SDK GitHub - 현재 버전은 v5 :  https://github.com/facebook/php-graph-sd
 Long Lived Access Token 을 관리하는 방법 : https://www.sammyk.me/access-token-handling-best-practices-in-facebook-php-sdk-v4
 장기토큰 vs 단기 토큰 : https://developers.facebook.com/docs/facebook-login/access-tokens#termtokens
 
+# 페이스북 access_token 받기
+http://localhost/auto-post-on-facebook-page-with-google-spreadsheets/src/facebook/facebook_login.php
+
 
 # 실행
 set XDEBUG_CONFIG="idekey=PHPSTORM"

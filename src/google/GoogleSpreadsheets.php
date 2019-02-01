@@ -153,7 +153,7 @@ class GoogleSpreadsheets {
             $body,
             ['valueInputOption' => "RAW"]
         );
-        Log::printT("%d cells updated. " . $result->getUpdatedCells());
+        Log::printT($result->getUpdatedCells() . " cells updated. ");
         // [END sheets_update_values]
         return $result;
     }
