@@ -8,7 +8,7 @@ This is a feature that automatically posts on Facebook pages using Google Spread
 4. Facebook API Authorization
 5. Facebook App review
 
-## Exec
+## Usage
 ```
 $ php start.php post_immediately `google-spreadsheet-id` `tab_name!range` `facebook-page-id`
 Ex) $ php start.php post_immediately 1mnDNHHeJAwDUrlM6n-Hi9xxMkhXTGrikNWKj0db-DAU usa!A7:E 258256297965103 
@@ -51,3 +51,6 @@ Ex) $ php start.php post_immediately 1mnDNHHeJAwDUrlM6n-Hi9xxMkhXTGrikNWKj0db-DA
 3. Commit changes  ```git commit -am 'fix: some bugs..```
 4. Push to branch ```git push origin foo/bar```
 5. Pull Request
+
+## License
+Licensed under the MIT license.
