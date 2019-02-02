@@ -13,6 +13,7 @@ This is a feature that automatically posts on Facebook pages using Google Spread
 $ php start.php post_immediately `google-spreadsheet-id` `tab_name!range` `facebook-page-id`
 Ex) $ php start.php post_immediately 1mnDNHHeJAwDUrlM6n-Hi9xxMkhXTGrikNWKj0db-DAU usa!A7:E 258256297965103 
 ```
+> You can schedule with the crontab or cron-job.org.
 
 ## Google API Authorization
 - [See this post on Gomcine blog (Korean)](https://gomcine.tistory.com/entry/구글-API-사용법-키-발급-oauth-인증-방법-정리)
