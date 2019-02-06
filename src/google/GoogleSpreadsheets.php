@@ -6,6 +6,12 @@ use Google_Service_Sheets;
 use Google_Service_Sheets_ValueRange;
 use Src\Log;
 
+/**
+ * User: heest
+ * Date: 2019-01-29
+ * Time: 오후 8:33
+ */
+
 class GoogleSpreadsheets {
 
     private $client;

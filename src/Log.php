@@ -5,11 +5,11 @@ use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 
 /**
- * Created by PhpStorm.
  * User: heest
  * Date: 2019-01-29
  * Time: 오후 8:33
  */
+
 class Log
 {
     public static function printT($msg) {

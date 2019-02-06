@@ -5,7 +5,6 @@ use Src\Facebook\FacebookApi;
 use Src\Google\GoogleSpreadsheets;
 
 /**
- * Created by PhpStorm.
  * User: heest
  * Date: 2019-01-29
  * Time: 오후 8:41

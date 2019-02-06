@@ -7,7 +7,6 @@ use Facebook\Facebook;
 use Src\Log;
 
 /**
- * Created by PhpStorm.
  * User: heest
  * Date: 2019-01-30
  * Time: 오후 6:04
