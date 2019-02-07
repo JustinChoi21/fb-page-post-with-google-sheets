@@ -23,6 +23,8 @@ try {
 $helper = $fb->getRedirectLoginHelper();
 
 $permissions = ['manage_pages', 'publish_pages']; // Optional permissions
+
+// You should change LoginUrl to yours.
 $loginUrl = $helper->getLoginUrl('http://localhost/auto-post-on-facebook-page-with-google-spreadsheets/src/facebook/facebook_login_callback.php', $permissions);
 
 echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';

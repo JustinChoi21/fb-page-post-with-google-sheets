@@ -10,6 +10,7 @@ namespace Src;
 class Schedule {
 
     public function checkSchedule($action_name) {
+
         // 스케쥴 시간을 체크하고 doAction()을 호출
         $doNow = false;
 

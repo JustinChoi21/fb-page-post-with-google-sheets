@@ -23,7 +23,6 @@ class FacebookApi {
 
         $config = parse_ini_file("facebook_auth.ini");
 
-        // facebook_login.php 에서 받은 토큰 붙여넣기
         $this->user_access_token = $config['user_access_token'];
         $this->app_id = $config['app_id'];
         $this->app_secret = $config['app_secret'];
@@ -45,14 +44,15 @@ class FacebookApi {
 
     public function getPageList()
     {
-        // graph api 에 요청해서 graphNode Facebook\GraphNodes\GraphNode를 받으면 Facebook\GraphNodes\GraphEdge를 사용할 수 있다.
-        // https://github.com/facebook/php-graph-sdk/blob/5.x/docs/reference/GraphEdge.md 참조
-        // https://github.com/facebook/php-graph-sdk/blob/5.x/docs/reference/GraphNode.md 참조
-        // response : FacebookResponse 클래스
+        // GraphEdge is GraphNode List
+        // refer : https://github.com/facebook/php-graph-sdk/blob/5.x/docs/reference/GraphEdge.md
+        // refer : https://github.com/facebook/php-graph-sdk/blob/5.x/docs/reference/GraphNode.md
 
         $page_list_graph_edge = array();
 
         try {
+
+            // response : FacebookResponse Class
             $response = $this->fb->get(
                 'me/accounts?fields=access_token, name, id'
             );
@@ -93,9 +93,11 @@ class FacebookApi {
                 );
 
                 $graphEdge = $response->getGraphEdge();
-//                foreach ($graphEdge as $grapNode) {
-//                    echo $grapNode->getField('message') . PHP_EOL;
-//                }
+
+                /*// refer : GraphEdge is GraphNode List
+                foreach ($graphEdge as $grapNode) {
+                    echo $grapNode->getField('message') . PHP_EOL;
+                }*/
 
             } catch (FacebookResponseException $e) {
                 Log::printT("Graph returned an error : " . $e->getMessage());
