@@ -33,7 +33,6 @@ class Schedule {
 
         // check and action
         switch($action_name) {
-
             case "post_immediately" :
                 $AutoPost->start($spreadsheetId, $range, $page_id);
                 break;
@@ -42,6 +41,28 @@ class Schedule {
                 if($this->checkSchedule($action_name)) {
                     $AutoPost->start($spreadsheetId, $range, $page_id);
                 }
+                break;
+
+            default :
+                Log::printT("please, check action name..");
+        }
+    }
+
+    public function facebookCheck($args) {
+
+        $AutoPost = new AutoPost();
+
+        switch($args[1]) { // action_name
+            case "page_list" :
+                $AutoPost->getPageList();
+                break;
+
+            case "page_feed" :
+                $AutoPost->getPageFeeds($args[2]); // page_id
+                break;
+
+            case "group_list" :
+                $AutoPost->getGroupList();
                 break;
 
             default :

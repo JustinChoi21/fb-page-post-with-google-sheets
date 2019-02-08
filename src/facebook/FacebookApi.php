@@ -42,8 +42,8 @@ class FacebookApi {
         $this->fb = $fb;
     }
 
-    public function getPageList()
-    {
+    public function getPageList() {
+
         // GraphEdge is GraphNode List
         // refer : https://github.com/facebook/php-graph-sdk/blob/5.x/docs/reference/GraphEdge.md
         // refer : https://github.com/facebook/php-graph-sdk/blob/5.x/docs/reference/GraphNode.md
@@ -149,6 +149,27 @@ class FacebookApi {
         }
 
         return $post_id;
+    }
+
+
+    public function getGroupList() {
+
+        $graph_group = array();
+
+        try {
+
+            // response : FacebookResponse Class
+            $response = $this->fb->get(
+                'me?fields=groups.limit(1000){name,created_time}' // limit 1000
+            );
+
+            $graph_group = $response->getGraphGroup();
+
+        } catch (FacebookSDKException $e) {
+            Log::printT("Facebook SDK returned an error : " . $e->getMessage());
+        }
+
+        return $graph_group;
     }
 }
 
